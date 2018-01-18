@@ -98,7 +98,7 @@ class FlaskTests(unittest.TestCase):
     	socketIO.on('my response', on_aaa_response)
     	socketIO.emit('my event', {u'data': u'User Connected'})
     	socketIO.wait(seconds=1)	
-    	self.assertEqual(msg, {u'message': u'One more user!', u'user_name': u'server'})
+    	self.assertEqual(msg, {u'data': u'User Connected'})
 
     def setDown(self):
         pass       
