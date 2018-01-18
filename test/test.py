@@ -83,7 +83,7 @@ class FlaskTests(unittest.TestCase):
     	socketIO.on('my response', on_aaa_response)
     	socketIO.emit('my event', {'data': u'Anonimus Disconnected'})
     	socketIO.wait(seconds=1)
-    	self.assertEqual(msg, {u'message': u'Anonimus left chat room', u'user_name': u'server'})
+    	self.assertEqual(msg, {u'data': u'Anonimus Disconnected'})
 
     def test_new_client(self):
     	global msg
